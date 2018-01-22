@@ -1,0 +1,6 @@
+framework module Pods_SXJFSwiftDemoTests {
+  umbrella header "Pods-SXJFSwiftDemoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
