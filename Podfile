@@ -6,8 +6,8 @@ target 'SXJFSwiftDemo' do
   use_frameworks!
 
   # Pods for SXJFSwiftDemo
-   pod 'Alamofire'
-  pod 'ReactiveSwift'
+  #pod 'Alamofire'
+   #pod 'ReactiveSwift'
   #pod 'ReactiveCocoa'
   pod 'RxSwift'
   pod 'RxCocoa'

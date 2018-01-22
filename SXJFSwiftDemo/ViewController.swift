@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import Result
 import RxCocoa
 import RxSwift
 
