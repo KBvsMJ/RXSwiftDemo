@@ -17,6 +17,7 @@
 		F5344DE1200E1735007D008B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5344DDF200E1735007D008B /* LaunchScreen.storyboard */; };
 		F5344DEC200E1735007D008B /* SXJFSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5344DEB200E1735007D008B /* SXJFSwiftDemoTests.swift */; };
 		F5344DF7200E1735007D008B /* SXJFSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5344DF6200E1735007D008B /* SXJFSwiftDemoUITests.swift */; };
+		F5880AF22015B0F6002FAB14 /* BindingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5880AF12015B0F6002FAB14 /* BindingsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		F5344DF2200E1735007D008B /* SXJFSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SXJFSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5344DF6200E1735007D008B /* SXJFSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SXJFSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		F5344DF8200E1735007D008B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F5880AF12015B0F6002FAB14 /* BindingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsViewController.swift; sourceTree = "<group>"; };
 		F5C74C002010BEA500C9E688 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FE76D654B33B5BF1F4FB9A50 /* Pods_SXJFSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SXJFSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -139,6 +141,7 @@
 		F5344DD5200E1734007D008B /* SXJFSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F5880AF02015B0DB002FAB14 /* binds */,
 				F5344DD6200E1734007D008B /* AppDelegate.swift */,
 				F5344DD8200E1735007D008B /* ViewController.swift */,
 				F5344DDA200E1735007D008B /* Main.storyboard */,
@@ -165,6 +168,14 @@
 				F5344DF8200E1735007D008B /* Info.plist */,
 			);
 			path = SXJFSwiftDemoUITests;
+			sourceTree = "<group>";
+		};
+		F5880AF02015B0DB002FAB14 /* binds */ = {
+			isa = PBXGroup;
+			children = (
+				F5880AF12015B0F6002FAB14 /* BindingsViewController.swift */,
+			);
+			path = binds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -463,6 +474,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F5344DD9200E1735007D008B /* ViewController.swift in Sources */,
+				F5880AF22015B0F6002FAB14 /* BindingsViewController.swift in Sources */,
 				F5344DD7200E1734007D008B /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
