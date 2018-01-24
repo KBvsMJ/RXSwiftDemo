@@ -203,9 +203,204 @@ class ViewController: UITableViewController {
 //        subject2.onNext("test1")
 //        subject1.onNext("test2")
         
-        Observable.of(1,2,3,4).map({$0*$0}).subscribe(onNext:{
-           print($0)
-        }).disposed(by: DisposeBag())
+//        Observable.of(1,2,3,4).map({$0*$0}).subscribe(onNext:{
+//           print($0)
+//        }).disposed(by: DisposeBag())
+        
+//        struct Player{
+//            var score:Variable<Int>
+//        }
+//
+//        let score1 = Player(score: Variable(80))
+//        let score2 = Player(score:Variable(90))
+//        let score3 = Player(score: Variable(550))
+//        let player = Variable(score1)
+//       _ = player.asObservable().flatMap({
+//            $0.score.asObservable()
+//        }).subscribe(onNext:{print($0)})
+//        score1.score.value = 85
+//        player.value = score2
+//        score1.score.value = 95
+//        score1.score.value = 222
+//        player.value = score3
+//        score2.score.value = 100
+        
+//        _ = Observable.of(10,100,1000).scan(1, accumulator: {
+//            aggregateVaule,newValue in aggregateVaule + newValue
+//        }).subscribe(onNext:{
+//            print($0)
+//        })
+        
+//        Observable.of("🐱", "🐰", "🐶",
+//                      "🐸", "🐱", "🐰",
+//                      "🐹", "🐸", "🐱").filter({
+//                        $0 == "🐱"
+//                      }).subscribe(onNext:{
+//                        print($0)
+//                      }).disposed(by: DisposeBag())
+
+//        Observable.of("🐱", "🐷", "🐱", "🐱", "🐱", "🐵", "🐱")
+//            .distinctUntilChanged().subscribe(onNext:{
+//                print($0)
+//            }).disposed(by: DisposeBag())
+//
+        
+//        Observable.of("🐱", "🐰", "🐶", "🐸", "🐷", "🐵").elementAt(5).subscribe(onNext:{
+//            print($0)
+//         }).disposed(by: DisposeBag())
+
+        
+//        Observable.of("🐱", "🐰", "🐶", "🐸", "🐰","🐷", "🐵").single({
+//            $0 == "🐶"
+//        }).subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+  
+//        Observable.of("🐱", "🐰", "🐶", "🐸", "🐷", "🐵").take(3).subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+        
+//        Observable.of("🐱", "🐰", "🐶", "🐸", "🐷", "🐵").takeLast(3).subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+//
+//        Observable.of(1, 2, 3, 4, 5, 6).takeWhile({
+//            $0<4
+//        }).subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+
+        
+//        let sourceSequence = PublishSubject<String>()
+//        let referenceSequence = PublishSubject<String>()
+//        _ = sourceSequence.takeUntil(referenceSequence).subscribe(onNext:{
+//          print($0)
+//        })
+//        sourceSequence.onNext("🐱")
+//        sourceSequence.onNext("🐰")
+//        sourceSequence.onNext("🐶")
+//        referenceSequence.onNext("🔴")
+//        sourceSequence.onNext("🐸")
+//        sourceSequence.onNext("🐷")
+//        sourceSequence.onNext("🐵")
+        
+//        Observable.of(1,2,3,4,5,6,7).skipWhile({
+//            $0<4
+//        }).subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+//
+//        Observable.of("🐱", "🐰", "🐶", "🐸", "🐷", "🐵").enumerated().skipWhile { (index,element) -> Bool in
+//            return index<3
+//            }.subscribe(onNext:{
+//                print($0)
+//            }).disposed(by: DisposeBag())
+        
+//        Observable.range(start: 1, count: 10).toArray().subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+
+//        Observable.of(10,100,1000,10000).reduce(0, accumulator: +).subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+
+//        let subject1 = BehaviorSubject(value: "🍎")
+//        let subject2 = BehaviorSubject(value: "🐶")
+//        let variable = Variable(subject1)
+//        _ = variable.asObservable().concat().subscribe(onNext:{
+//            print($0)
+//        })
+//
+//        subject1.onNext("🍐")
+//        subject1.onNext("🍊")
+//        variable.value = subject2
+//        subject2.onNext("🐱")    //1完成前，会被忽略
+//        subject2.onNext("teng") //1完成前，会被忽略
+//        subject2.onNext("fei")    //1完成前的最后一个，会被接收
+//        subject1.onCompleted()
+//        subject2.onNext("🐭")
+        
+//         let intSequence = Observable<Int>.interval(1, scheduler: MainScheduler.instance).publish()
+//        _ = intSequence.subscribe(onNext:{print("Subscription 1:, Event: \($0)")})
+//        DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
+//           _ = intSequence.connect()
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now()+4) {
+//            _ =  intSequence.subscribe(onNext:{print("Subscription 2:, Event: \($0)")})
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now()+6) {
+//            _ = intSequence.subscribe(onNext:{
+//                print("Subscription 3:, Event: \($0)")
+//            })
+//        }
+        
+//            let intSequence = Observable<Int>.interval(1, scheduler: MainScheduler.instance).replay(5)
+//
+//        _ = intSequence.subscribe(onNext:{print("Subscription 1:, Event: \($0)")})
+//        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+//            _ = intSequence.connect()
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now()+4) {
+//            _ = intSequence.subscribe(onNext:{
+//                 print("Subscription 2:, Event: \($0)")
+//            })
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now()+8) {
+//            _ = intSequence.subscribe(onNext:{
+//                print("Subscription 3:, Event: \($0)")
+//            })
+//        }
+//
+        
+        
+//        let subject = PublishSubject<Int>()
+//        _ = subject.subscribe(onNext:{
+//            print("Subject: \($0)")
+//        })
+//        let intSequence = Observable<Int>.interval(1, scheduler: MainScheduler.instance).multicast(subject)
+//        _ = intSequence.subscribe(onNext:{print("\tSubscription 1:, Event: \($0)")})
+//        DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+//            _ =  intSequence.connect()
+//        }
+//        DispatchQueue.main.asyncAfter(deadline: .now()+4) {
+//            _ =  intSequence.subscribe(onNext:{
+//                print("\tSubscription 2:, Event: \($0)")
+//            })
+//        }
+        
+//        let sequenceThatFails = PublishSubject<String>()
+//        sequenceThatFails.catchErrorJustReturn("😊").subscribe(onNext:{
+//            print($0)
+//        }).disposed(by: DisposeBag())
+//        sequenceThatFails.onNext("😬")
+//        sequenceThatFails.onNext("😨")
+//        sequenceThatFails.onNext("😡")
+//        sequenceThatFails.onNext("🔴")
+//        var count = 1
+//        let sequenceThatErrors = Observable<String>.create({observer in  observer.onNext("🍎")
+//            observer.onNext("🍐")
+//            observer.onNext("🍊")
+//            
+//            if count == 1  {
+//                observer.onError(NSError(domain: "test", code: 0, userInfo: nil))
+//                print("Error encountered")
+//                count += 1
+//            }
+//            observer.onNext("🐶")
+//            observer.onNext("🐱")
+//            observer.onNext("🐭")
+//            observer.onCompleted()
+//            
+//            return Disposables.create()
+//            
+//            
+//        })
+//       _ = sequenceThatErrors.retry(3).subscribe(onNext:{
+//            print($0)
+//        })
+       
+        
+        
         
         
         
