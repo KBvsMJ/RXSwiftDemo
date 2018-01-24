@@ -19,3 +19,22 @@
 
 
 ![Image](https://github.com/KBvsMJ/RXSwiftDemo/blob/master/bindings_gif/1.gif)
+
+
+
+
+#2---监听TableView的contentoffset属性
+
+```
+//监听tableviewContentoffset
+        _ = tableView.rx.contentOffset.map({$0.y}).subscribe(onNext:{ [unowned self] in
+            self.title =  "contentOffset.y =" + " " + String(format:"%.2f",$0)
+        })
+
+```
+
+#效果演示图
+
+
+![Image](https://github.com/KBvsMJ/RXSwiftDemo/tree/master/tableView_ContentoffSet_gif)
+
