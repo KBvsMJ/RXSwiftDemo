@@ -18,4 +18,4 @@
 #效果演示图
 
 
-!Image(https://github.com/KBvsMJ/RXSwiftDemo/blob/master/bindings_gif/1.gif)
+![Image](https://github.com/KBvsMJ/RXSwiftDemo/blob/master/bindings_gif/1.gif)
