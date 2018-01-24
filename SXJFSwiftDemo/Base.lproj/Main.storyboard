@@ -218,7 +218,68 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PSg-wx-W5Q" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="920.79999999999995" y="-203.74812593703149"/>
+            <point key="canvasLocation" x="650" y="-239"/>
+        </scene>
+        <!--Table View Controller-->
+        <scene sceneID="nBn-Su-cDM">
+            <objects>
+                <tableViewController storyboardIdentifier="TableViewController" id="xkd-6v-p4Q" customClass="TableViewController" customModule="SXJFSwiftDemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iHQ-ON-iLQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="603"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RXTableViewCell" id="zuS-iH-Mod" customClass="RXTableViewCell" customModule="SXJFSwiftDemo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="zuS-iH-Mod" id="Yvc-hc-JQy">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="jim" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fbD-kp-jyU">
+                                            <rect key="frame" x="16" y="0.0" width="22" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" priority="250" constant="20" id="WxB-aW-QEh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="15" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G2p-o2-fry">
+                                            <rect key="frame" x="341" y="0.0" width="18" height="44"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" priority="250" constant="20" id="pKp-Mq-Tax"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="fbD-kp-jyU" firstAttribute="top" secondItem="Yvc-hc-JQy" secondAttribute="top" id="4su-aw-4pc"/>
+                                        <constraint firstAttribute="bottom" secondItem="fbD-kp-jyU" secondAttribute="bottom" id="AOu-Fr-WNY"/>
+                                        <constraint firstAttribute="bottom" secondItem="G2p-o2-fry" secondAttribute="bottom" id="FR3-Am-EeQ"/>
+                                        <constraint firstItem="G2p-o2-fry" firstAttribute="top" secondItem="Yvc-hc-JQy" secondAttribute="top" id="MpM-rm-FYs"/>
+                                        <constraint firstAttribute="trailing" secondItem="G2p-o2-fry" secondAttribute="trailing" constant="16" id="Yjh-9s-om6"/>
+                                        <constraint firstItem="fbD-kp-jyU" firstAttribute="leading" secondItem="Yvc-hc-JQy" secondAttribute="leading" constant="16" id="ta5-Gn-62m"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblAge" destination="G2p-o2-fry" id="BYN-ym-QVi"/>
+                                    <outlet property="lblName" destination="fbD-kp-jyU" id="ZsA-Le-hlq"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="xkd-6v-p4Q" id="SvA-A6-hN6"/>
+                            <outlet property="delegate" destination="xkd-6v-p4Q" id="7In-dY-qA3"/>
+                        </connections>
+                    </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Key-4x-7ML" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1639" y="-354"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="OjR-ul-Fgs">

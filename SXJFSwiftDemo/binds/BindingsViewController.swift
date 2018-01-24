@@ -25,7 +25,9 @@ class BindingsViewController: UIViewController {
   
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.title = "监听文本框属性"
+       self.navigationItem.hidesBackButton = true
+      
         //绑定textfield 监听text的值变化
         _ = Observable.combineLatest(textField_First.rx.text,textField_Second.rx.text).map { (text1,text2) -> String in
             let result1 = Int(text1!) ?? 0
@@ -34,7 +36,11 @@ class BindingsViewController: UIViewController {
             return "\(result1+result2)"
         }.bind(to: textField_Result.rx.text)
         
-        
+        //button tap事件
+        _ = btnBack.rx.tap.subscribe(onNext:{
+            [unowned self] in
+            self.navigationController?.popViewController(animated: true)
+        })
         
         
         

@@ -27,6 +27,13 @@ class ViewController: UITableViewController {
         let bindinsCtl = sb.instantiateViewController(withIdentifier: "BindingsViewController")
         self.navigationController?.pushViewController(bindinsCtl, animated: true)
         })
+        
+        _ = btnTableView.rx.tap.subscribe(onNext:{ [unowned self] in
+            let sb:UIStoryboard! = UIStoryboard.init(name: "Main", bundle: nil)
+            let bindinsCtl = sb.instantiateViewController(withIdentifier: "TableViewController")
+            self.navigationController?.pushViewController(bindinsCtl, animated: true)
+        })
+        
     
          //never
 //        let disposeBag = DisposeBag()
