@@ -36,5 +36,5 @@
 #效果演示图
 
 
-![Image](https://github.com/KBvsMJ/RXSwiftDemo/tree/master/tableView_ContentoffSet_gif/2.gif)
+![Image](https://github.com/KBvsMJ/RXSwiftDemo/blob/master/tableView_ContentoffSet_gif/2.gif)
 
