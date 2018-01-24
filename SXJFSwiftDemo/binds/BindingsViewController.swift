@@ -26,9 +26,13 @@ class BindingsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-
+        //绑定textfield 监听text的值变化
+        _ = Observable.combineLatest(textField_First.rx.text,textField_Second.rx.text).map { (text1,text2) -> String in
+            let result1 = Int(text1!) ?? 0
+            let result2 = Int(text2!) ?? 0
         
-        
+            return "\(result1+result2)"
+        }.bind(to: textField_Result.rx.text)
         
         
         
