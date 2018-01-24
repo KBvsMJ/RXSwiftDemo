@@ -42,15 +42,15 @@
 #3---TableView绑定数据源
 
 ```
- tableView.dataSource = nil;
-        tableView.delegate = nil
+         tableView.dataSource = nil;
+         tableView.delegate = nil
         
-       _ =  DataSource.asObservable().bind(to: tableView.rx.items(cellIdentifier: "RXTableViewCell", cellType: RXTableViewCell.self)){
-        _,element,cell in cell.lblName.text = "姓名:" + element.name
-        cell.lblAge.text = "年龄:" + String(element.age)
-        }
-        DataSource.value.append(contentsOf: TableViewController.dataArray)
-        DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
+           _ =  DataSource.asObservable().bind(to: tableView.rx.items(cellIdentifier: "RXTableViewCell", cellType: RXTableViewCell.self)){
+          _,element,cell in cell.lblName.text = "姓名:" + element.name
+          cell.lblAge.text = "年龄:" + String(element.age)
+         }
+         DataSource.value.append(contentsOf: TableViewController.dataArray)
+         DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
             [unowned self] in
             self.DataSource.value.append(contentsOf: TableViewController.dataArray)
         }
