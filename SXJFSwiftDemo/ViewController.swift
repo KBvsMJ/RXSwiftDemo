@@ -401,8 +401,10 @@ class ViewController: UITableViewController {
        
         
         
-        
-        
+        //监听tableviewContentoffset
+        _ = tableView.rx.contentOffset.map({$0.y}).subscribe(onNext:{ [unowned self] in
+            self.title =  "contentOffset.y =" + " " + String(format:"%.2f",$0)
+        })
         
         
     }
