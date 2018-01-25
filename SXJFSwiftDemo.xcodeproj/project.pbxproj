@@ -20,6 +20,9 @@
 		F5344DE1200E1735007D008B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F5344DDF200E1735007D008B /* LaunchScreen.storyboard */; };
 		F5344DEC200E1735007D008B /* SXJFSwiftDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5344DEB200E1735007D008B /* SXJFSwiftDemoTests.swift */; };
 		F5344DF7200E1735007D008B /* SXJFSwiftDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5344DF6200E1735007D008B /* SXJFSwiftDemoUITests.swift */; };
+		F586284020196BD80005F1E5 /* SectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F586283F20196BD80005F1E5 /* SectionTableViewController.swift */; };
+		F5862842201970600005F1E5 /* SectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5862841201970600005F1E5 /* SectionTableViewCell.swift */; };
+		F58628442019707D0005F1E5 /* SectionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F58628432019707D0005F1E5 /* SectionModel.swift */; };
 		F5880AF22015B0F6002FAB14 /* BindingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5880AF12015B0F6002FAB14 /* BindingsViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -65,6 +68,9 @@
 		F5344DF2200E1735007D008B /* SXJFSwiftDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SXJFSwiftDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F5344DF6200E1735007D008B /* SXJFSwiftDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SXJFSwiftDemoUITests.swift; sourceTree = "<group>"; };
 		F5344DF8200E1735007D008B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F586283F20196BD80005F1E5 /* SectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewController.swift; sourceTree = "<group>"; };
+		F5862841201970600005F1E5 /* SectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionTableViewCell.swift; sourceTree = "<group>"; };
+		F58628432019707D0005F1E5 /* SectionModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SectionModel.swift; sourceTree = "<group>"; };
 		F5880AF12015B0F6002FAB14 /* BindingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BindingsViewController.swift; sourceTree = "<group>"; };
 		F5C74C002010BEA500C9E688 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		FE76D654B33B5BF1F4FB9A50 /* Pods_SXJFSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SXJFSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -157,6 +163,7 @@
 		F5344DD5200E1734007D008B /* SXJFSwiftDemo */ = {
 			isa = PBXGroup;
 			children = (
+				F586283E20196BB90005F1E5 /* sectionTableView */,
 				F531849F20186B3D006B98A6 /* tableview */,
 				F5880AF02015B0DB002FAB14 /* binds */,
 				F5344DD6200E1734007D008B /* AppDelegate.swift */,
@@ -185,6 +192,16 @@
 				F5344DF8200E1735007D008B /* Info.plist */,
 			);
 			path = SXJFSwiftDemoUITests;
+			sourceTree = "<group>";
+		};
+		F586283E20196BB90005F1E5 /* sectionTableView */ = {
+			isa = PBXGroup;
+			children = (
+				F586283F20196BD80005F1E5 /* SectionTableViewController.swift */,
+				F5862841201970600005F1E5 /* SectionTableViewCell.swift */,
+				F58628432019707D0005F1E5 /* SectionModel.swift */,
+			);
+			path = sectionTableView;
 			sourceTree = "<group>";
 		};
 		F5880AF02015B0DB002FAB14 /* binds */ = {
@@ -341,12 +358,16 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SXJFSwiftDemo/Pods-SXJFSwiftDemo-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework",
 				"${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework",
+				"${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework",
 				"${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Differentiator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxCocoa.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxDataSources.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RxSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -492,8 +513,11 @@
 			files = (
 				F53184A720186E42006B98A6 /* BasicModel.swift in Sources */,
 				F5344DD9200E1735007D008B /* ViewController.swift in Sources */,
+				F58628442019707D0005F1E5 /* SectionModel.swift in Sources */,
 				F5880AF22015B0F6002FAB14 /* BindingsViewController.swift in Sources */,
 				F5344DD7200E1734007D008B /* AppDelegate.swift in Sources */,
+				F586284020196BD80005F1E5 /* SectionTableViewController.swift in Sources */,
+				F5862842201970600005F1E5 /* SectionTableViewCell.swift in Sources */,
 				F53184A320186DB3006B98A6 /* RXTableViewCell.swift in Sources */,
 				F53184A120186C1A006B98A6 /* TableViewController.swift in Sources */,
 			);

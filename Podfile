@@ -11,6 +11,7 @@ target 'SXJFSwiftDemo' do
   #pod 'ReactiveCocoa'
   pod 'RxSwift'
   pod 'RxCocoa'
+  pod 'RxDataSources'
   target 'SXJFSwiftDemoTests' do
     inherit! :search_paths
     # Pods for testing

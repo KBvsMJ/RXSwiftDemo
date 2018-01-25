@@ -12,7 +12,7 @@ import RxSwift
 class TableViewController: UITableViewController {
 
     let DataSource = Variable([BasicModel]())
-    static var dataArray = [
+    static let dataArray = [
         BasicModel(name: "Jack", age: 18),
         BasicModel(name: "Tim", age: 20),
         BasicModel(name: "Andy", age: 24),
@@ -32,13 +32,18 @@ class TableViewController: UITableViewController {
         cell.lblAge.text = "年龄:" + String(element.age)
         }
         DataSource.value.append(contentsOf: TableViewController.dataArray)
+        
         DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
             [unowned self] in
             self.DataSource.value.append(contentsOf: TableViewController.dataArray)
         }
          _ = tableView.rx.modelSelected(BasicModel.self).subscribe(onNext:{model in
             print("name=\(model.name) age= \(model.age)")
+            
+            self.navigationController?.popViewController(animated: true)
+            
         })
+       
         
      
         
