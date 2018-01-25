@@ -38,3 +38,43 @@
 
 ![Image](https://github.com/KBvsMJ/RXSwiftDemo/blob/master/tableView_ContentoffSet_gif/2.gif)
 
+
+#3---TableView绑定数据源
+
+```
+         tableView.dataSource = nil;
+         tableView.delegate = nil
+        
+           _ =  DataSource.asObservable().bind(to: tableView.rx.items(cellIdentifier: "RXTableViewCell", cellType: RXTableViewCell.self)){
+          _,element,cell in cell.lblName.text = "姓名:" + element.name
+          cell.lblAge.text = "年龄:" + String(element.age)
+         }
+         DataSource.value.append(contentsOf: TableViewController.dataArray)
+         DispatchQueue.main.asyncAfter(deadline: .now()+2.0) {
+            [unowned self] in
+            self.DataSource.value.append(contentsOf: TableViewController.dataArray)
+        }
+         _ = tableView.rx.modelSelected(BasicModel.self).subscribe(onNext:{model in
+            print("name=\(model.name) age= \(model.age)")
+        })
+        
+
+```
+
+#效果演示图
+
+
+![Image](https://github.com/KBvsMJ/RXSwiftDemo/blob/master/tabelview_gif/3.gif)
+
+
+
+
+
+
+
+
+
+
+
+
+
