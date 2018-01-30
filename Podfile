@@ -12,6 +12,12 @@ target 'SXJFSwiftDemo' do
   pod 'RxSwift'
   pod 'RxCocoa'
   pod 'RxDataSources'
+  pod 'Alamofire'
+  pod 'RxAlamofire'
+  pod 'Moya'
+  pod 'Moya/RxSwift'
+  pod 'ObjectMapper'
+  pod 'RxOptional'
   target 'SXJFSwiftDemoTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,6 +9,15 @@
 import UIKit
 import RxCocoa
 import RxSwift
+import Alamofire
+import RxAlamofire
+#if DEBUG
+let host = "https://stg-rxswift.leanapp.cn"
+#else
+let host = "https://rxswift.leanapp.cn"
+#endif
+
+
 class ViewController: UITableViewController {
 
  
@@ -47,7 +56,17 @@ class ViewController: UITableViewController {
             self.title =  "contentOffset.y =" + " " + String(format:"%.2f",$0)
         })
         
-        
+      
+        _ = btnOther.rx.tap.subscribe(onNext:{
+            
+            [unowned self] in
+            
+            let sb:UIStoryboard! = UIStoryboard.init(name: "Main", bundle: nil)
+            let demoCtl = sb.instantiateViewController(withIdentifier: "DemoViewController")
+            self.navigationController?.pushViewController(demoCtl, animated: true)
+            
+            
+        })
         
         
     }

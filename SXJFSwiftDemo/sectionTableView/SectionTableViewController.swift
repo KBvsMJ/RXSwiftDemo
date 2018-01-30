@@ -47,13 +47,11 @@ class SectionTableViewController: UITableViewController {
             
             [unowned self] in self.navigationController?.popViewController(animated: true)
             print($0)
-            
-            
-            
-            
+        
         })
         
         
+      
         
         
         
