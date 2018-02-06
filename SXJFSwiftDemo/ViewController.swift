@@ -31,6 +31,9 @@ class ViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       
+        
+        
+        
        _ = btnBinds.rx.tap.subscribe(onNext:{ [unowned self] in
         let sb:UIStoryboard! = UIStoryboard.init(name: "Main", bundle: nil)
         let bindinsCtl = sb.instantiateViewController(withIdentifier: "BindingsViewController")
@@ -62,9 +65,11 @@ class ViewController: UITableViewController {
             [unowned self] in
             
             let sb:UIStoryboard! = UIStoryboard.init(name: "Main", bundle: nil)
-            let demoCtl = sb.instantiateViewController(withIdentifier: "DemoViewController")
-            self.navigationController?.pushViewController(demoCtl, animated: true)
+//            let demoCtl = sb.instantiateViewController(withIdentifier: "DemoViewController")
+//            self.navigationController?.pushViewController(demoCtl, animated: true)
             
+            let moyaCtl =  sb.instantiateViewController(withIdentifier: "MoyaViewController")
+            self.navigationController?.pushViewController(moyaCtl, animated: true)
             
         })
         

@@ -18,6 +18,7 @@ target 'SXJFSwiftDemo' do
   pod 'Moya/RxSwift'
   pod 'ObjectMapper'
   pod 'RxOptional'
+  pod 'SwiftyJSON'
   target 'SXJFSwiftDemoTests' do
     inherit! :search_paths
     # Pods for testing
