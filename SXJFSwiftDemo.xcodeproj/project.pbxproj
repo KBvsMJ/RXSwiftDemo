@@ -38,6 +38,7 @@
 		F5F8A44F2022FD4B00C85EB0 /* DouBanAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F8A44E2022FD4B00C85EB0 /* DouBanAPI.swift */; };
 		F5F8A451202328A500C85EB0 /* MyService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5F8A450202328A500C85EB0 /* MyService.swift */; };
 		F5FF6BA8202942C300088101 /* TBLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF6BA7202942C300088101 /* TBLocation.swift */; };
+		F5FF6BAA2029C5B300088101 /* BannerListService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5FF6BA92029C5B300088101 /* BannerListService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -101,6 +102,7 @@
 		F5F8A44E2022FD4B00C85EB0 /* DouBanAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DouBanAPI.swift; sourceTree = "<group>"; };
 		F5F8A450202328A500C85EB0 /* MyService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyService.swift; sourceTree = "<group>"; };
 		F5FF6BA7202942C300088101 /* TBLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TBLocation.swift; sourceTree = "<group>"; };
+		F5FF6BA92029C5B300088101 /* BannerListService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerListService.swift; sourceTree = "<group>"; };
 		FE76D654B33B5BF1F4FB9A50 /* Pods_SXJFSwiftDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SXJFSwiftDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -282,6 +284,7 @@
 				F5232E4E20283F3600D12EF5 /* RequestAlertPlugin.swift */,
 				F5232E502028541C00D12EF5 /* TBService.swift */,
 				F5FF6BA7202942C300088101 /* TBLocation.swift */,
+				F5FF6BA92029C5B300088101 /* BannerListService.swift */,
 			);
 			path = Moya;
 			sourceTree = "<group>";
@@ -612,6 +615,7 @@
 				F5232E4D20282C8B00D12EF5 /* AssetService.swift in Sources */,
 				F5F8A44B2022AA7800C85EB0 /* MoyaViewController.swift in Sources */,
 				F5344DD7200E1734007D008B /* AppDelegate.swift in Sources */,
+				F5FF6BAA2029C5B300088101 /* BannerListService.swift in Sources */,
 				F5A5778E20209A640057935B /* TScheduler.swift in Sources */,
 				F5FF6BA8202942C300088101 /* TBLocation.swift in Sources */,
 				F586284020196BD80005F1E5 /* SectionTableViewController.swift in Sources */,
